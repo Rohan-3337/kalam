@@ -1,0 +1,175 @@
+<%- include('./partials/header.ejs',{data:details}) %>
+
+<style>
+    .banner{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.9)),url("https://scontent.fdel27-5.fna.fbcdn.net/v/t45.1600-4/19897029_6079623003641_1666809569864581120_n.png?stp=c0.22.526.275a_cp0_dst-jpg_p526x296_q90_spS444&_nc_cat=103&ccb=1-7&_nc_sid=67cdda&_nc_ohc=zsWrVMdBgiAAX8uPM-x&_nc_ht=scontent.fdel27-5.fna&oh=00_AfA21Me0y1nijGRsw31nGrQf3pdrDxRmP1ptyi7SZ1NvNg&oe=63C5B9AE") ;
+    
+    
+    min-height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+       
+    justify-content: center;
+
+    width: 100vw; 
+}
+.bold{
+    font-size: 2rem;
+
+}
+.bullet{
+    font-size: 1.4rem;
+}
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 2em;
+    margin-top: 1rem;
+
+}
+.wrapper{
+    display: inline-flex;
+}
+span{
+    color: #ff7082;
+}
+
+
+
+</style>
+
+<div class="banner" id="banner">
+    <div class="hero">
+        <h2 class="title text text-center">kalam</h2>
+            <div class="wrapper">
+            <div class="static-txt">wake up to safe driving with <span class="dynamic"></span></div>
+            
+            </div>
+    </div>
+</div>
+
+</section>
+<!-------------------------------- our team ----------------------------->
+<section class="team">
+<div class="container-fluid">
+    <div class="row">
+
+            <h2 class="heading text-center">Our team</h2>
+            <div class="col-md-6 text my-3">
+                <h3>this is our team</h3>
+                <b class="bold my-3"> Team leader:- jay prakash choudhary</b>
+                <li><b class="bullet my-3">technical incharge :-rohan</b></li>
+                <li><b class="bullet my-3">mechanical :-shivam kumar shah</b></li>
+                <li><b class="bullet my-3">team convenor :-vivek kumar shah</b></li>
+                <li><b class="bullet my-3">advertising :-syed mohd. ummair</b></li>
+                <li><b class="bullet my-3">social media incharge :-ved prakash dubey</b></li>   
+                <li><b class="bullet my-3">finance :-ajay</b></li>
+
+                </div>
+                
+                <div class="col-md-6 team-img">
+                    <img src="/image/3.jpg" class="
+                    img-fluid" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+<!-------------------------------- our product ----------------------------->
+<section class="product">
+<div class="container-fluid">
+    <div class="row">
+
+                <h2 class="heading text-center"><%= items.title %></h2>
+                <div class="col-md-6 p-info">
+                    <h3><%= items.subtitle %></h3>
+                    <p><%= items.para1 %><p>
+                        <p><%= items.para2 %>
+                        </p>
+                    </div>
+                
+                 
+        <div class="col-md-6 p-img-1">
+            <img src="\image\2.jpg" class="
+                img-fluid" alt="">
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6 p-img-2">
+
+
+            <img src="/image/r_4.gif" style="height: 35rem !important;" class="
+                img-fluid" alt="">
+        </div>
+        <div class="col-md-6 p-info">
+            <h3 class="red"><%= item.subtitle %></h3>
+            <p><%= item.para1 %><p>
+            <p><%= item.para2 %>
+            </p>
+        </div>
+
+    </div>
+</div>
+</section>
+<!-------------------------------- About us ----------------------------->
+
+<section class="about">
+<div class="container-fluid">
+    <div class="row text-center">
+        <h2 class="heading">about</h2>
+        <div class="col-md-6 about-img">
+            <img src="https://cdn.pixabay.com/photo/2022/03/16/01/23/bird-7071408_960_720.jpg" class="img-fluid"
+                alt="">
+        </div>
+        <div class="col-md-6 about-text">
+            <h3 class="title">About us</h3>
+            <p><%= about.para1 %></p>
+            <p><%= about.para2 %></p>
+            <div class="icon">
+                <a href="<%= about.links[0].url %>" target="_blank" class="fab bg-dark fa-facebook-f"></a>
+                <a href="<%= about.links[1].url %>" target="_blank" class="fab fa-twitter"></a>
+                <a href=" <%= about.links[2].url %> " target="_blank" class="fab fa-instagram"></a>
+                <a href="<%= about.links[3].url %>" target="_blank" class="fab fa-pinterest"></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+<!-------------------------------- Contact us ----------------------------->
+<section class="contact" id="contacts">
+<h1 class="heading text-center">contact us</h1>
+<div class="contact-box-container mx-auto">
+    <div class="contact-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3><%= c_section.address %></h3>
+      </div>
+  <div class="contact-box">
+    <i class="fas fa-envelope"></i>
+    <h3><%= c_section.gmail %></h3>
+  </div>
+  <div class="contact-box">
+    <i class="fas fa-phone"></i>
+    <h3><%= c_section.phone %></h3>
+  </div>
+</div>
+<div class="form-container mx-auto">
+  <form name="sentMessage" action="/contacts" method="post" novalidate>
+    <div class="input-box">
+      <input type="text" placeholder="first name" name="first name">
+      <input type="text" placeholder="last name" name="last name">
+
+    </div>
+    <input type="email" placeholder="e-mail" name="email">
+    <input type="tel" placeholder="Phone Number" name="phone">
+
+    <textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea>
+    <input type="submit" value="send">
+  </form>
+</div>
+</section>
+<%- include('./partials/footer.ejs')%>

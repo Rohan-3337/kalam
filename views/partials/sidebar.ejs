@@ -1,0 +1,47 @@
+<%- include('./partials/header.ejs',{data:details}) %>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+
+
+.st-font{
+    font-family: "Satisfy";
+}
+a.nav-link{
+    color: white !important;
+    
+}
+a.nav-link:hover{
+    color: black !important;
+    background: #f5c73c !important;
+    font-weight: bold !important;
+}
+a.nav-link.active{
+    background: #ffc107 !important;
+    color: black !important;
+
+}
+.i-color{
+    color: chartreuse;
+}
+.col-sm-4 p{
+    color: whitesmoke;
+}
+</style>
+
+<div class="border-end border-warning h-100">
+    <div class="text-center">
+        <img src="https://wallpapers.com/images/high/a-silent-voice-now-then-art-2ohhk1ptkpaqil84.jpg" class="img-fluid rounded-circle mt-5" alt="">
+        <h3 class="text-white mt-3 st-font">Rohan Kashyap</h3>
+    </div>
+     <hr>
+    <nav class="flex-column flo text-center mt-4">
+        <a href="/" class="nav-link ">Home</a>
+        <a href="/services" class="nav-link ">Services</a>
+        <a href="/skill" class="nav-link ">Skill</a>
+        <a href="/contact" class="nav-link">Contact</a>
+    </nav>
+</div>
+
+<%- include('./partials/footer.ejs',{data:details}) %>

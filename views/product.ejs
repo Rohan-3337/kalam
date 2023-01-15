@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs',{data:details}) %>
+<section class="product">
+    <div class="container-fluid">
+        <div class="row">
+    
+                    <h2 class="heading text-center"><%= items.title %></h2>
+                    <div class="col-md-6 p-info">
+                        <h3><%= items.subtitle %></h3>
+                        <p><%= items.para1 %><p>
+                            <p><%= items.para2 %>
+                            </p>
+                        </div>
+                    
+                     
+            <div class="col-md-6 p-img-1">
+                <img src="\image\2.jpg" class="
+                img-fluid" alt="">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 p-img-2">
+    
+    
+                <img src="/image/r_4.gif" style="height: 35rem !important;" class="
+                img-fluid" alt="">            </div>
+            <div class="col-md-6 p-info">
+                <h3 class="red"><%= item.subtitle %></h3>
+                <p><%= item.para1 %><p>
+                <p><%= item.para2 %>
+                </p>
+            </div>
+    
+        </div>
+    </div>
+    </section>
+<%- include('./partials/footer.ejs')%>

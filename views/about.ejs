@@ -1,0 +1,32 @@
+
+<%- include('./partials/header.ejs',{data:details}) %>
+
+
+
+    <!-------------------------------- About us ----------------------------->
+
+    <section class="about">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <h2 class="heading">about</h2>
+                <div class="col-md-6 about-img">
+                    <img src="https://cdn.pixabay.com/photo/2022/03/16/01/23/bird-7071408_960_720.jpg" class="img-fluid"
+                        alt="">
+                </div>
+                <div class="col-md-6 about-text">
+                    <h3 class="title">About us</h3>
+                    <p><%= about.para1 %></p>
+                    <p><%= about.para2 %></p>
+                    <div class="icon">
+                        <a href="<%= about.links[0].url %>" target="_blank" class="fab bg-dark fa-facebook-f"></a>
+                        <a href="<%= about.links[1].url %>" target="_blank" class="fab fa-twitter"></a>
+                        <a href=" <%= about.links[2].url %> " target="_blank" class="fab fa-instagram"></a>
+                        <a href="<%= about.links[3].url %>" target="_blank" class="fab fa-pinterest"></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs')%>

@@ -1,0 +1,35 @@
+
+<%- include('./partials/header.ejs',{data:details}) %>
+
+<section class="contact" id="contacts">
+  <h1 class="heading text-center">contact us</h1>
+  <div class="contact-box-container mx-auto">
+      <div class="contact-box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3><%= c_section.address %></h3>
+        </div>
+    <div class="contact-box">
+      <i class="fas fa-envelope"></i>
+      <h3><%= c_section.gmail %></h3>
+    </div>
+    <div class="contact-box">
+      <i class="fas fa-phone"></i>
+      <h3><%= c_section.phone %></h3>
+    </div>
+  </div>
+    <div class="form-container mx-auto">
+      <form name="sentMessage" action="/contacts" method="post" novalidate>
+        <div class="input-box">
+          <input type="text" placeholder="first name" name="first name">
+          <input type="text" placeholder="last name" name="last name">
+
+        </div>
+        <input type="email" placeholder="e-mail" name="email">
+        <input type="tel" placeholder="Phone Number" name="phone">
+
+        <textarea name="message" id="" cols="30" rows="10" placeholder="message"></textarea>
+        <input type="submit" value="send">
+      </form>
+    </div>
+  </section>
+<%- include('./partials/footer.ejs')%>
